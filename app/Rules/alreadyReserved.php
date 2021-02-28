@@ -29,9 +29,9 @@ class alreadyReserved implements Rule
     {
 
         if(DB::table('reservations')->select('email', 'date')->where('date', '=', $this->date)->where('email', '=', $value)->get() == [])
-            return false;
-        else {
             return true;
+        else {
+            return false;
         }
 
     }
