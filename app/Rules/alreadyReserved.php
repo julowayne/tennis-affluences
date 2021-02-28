@@ -30,10 +30,10 @@ class alreadyReserved implements Rule
         // var_dump(DB::table('reservations')->select('email', 'date')->where('date', '=', $this->date)->where('email', '=', $value)->get());
         // die();
 
-        if(empty(DB::table('reservations')->select('email', 'date')->where('date', '=', $this->date)->where('email', '=', $value)->get()))
-            return true;
-        else {
+        if(DB::table('reservations')->select('email', 'date')->where('date', '=', $this->date)->where('email', '=', $value)->first())
             return false;
+        else {
+            return true;
         }
 
     }
