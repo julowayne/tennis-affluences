@@ -27,6 +27,8 @@ class alreadyReserved implements Rule
      */
     public function passes($attribute, $value)
     {
+        var_dump(DB::table('reservations')->select('email', 'date')->where('date', '=', $this->date)->where('email', '=', $value)->get());
+        die();
 
         if(DB::table('reservations')->select('email', 'date')->where('date', '=', $this->date)->where('email', '=', $value)->get() == [])
             return true;
