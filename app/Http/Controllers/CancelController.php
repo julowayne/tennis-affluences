@@ -32,6 +32,6 @@ class cancelController extends Controller
             $m->to($params['email'])->subject('Annulation de votre réservation');
         });
         DB::table('reservations')->where('token', '=', $token)->delete();
-        return view('reservation', ['token' => $token]);
+        return redirect()->route('reservation'); 
     }
 }

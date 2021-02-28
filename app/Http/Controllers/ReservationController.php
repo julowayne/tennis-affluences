@@ -28,6 +28,6 @@ class reservationController extends Controller
             $m->to($params['email'])->subject('Réservation de votre terrain');
         });
         $request->session()->flash('notification', 'Votre terrain a bien été réservé, vous allez recevoir un e-mail avec toutes les informations necessaires !');
-        return view('welcome');    
+        return redirect()->route('welcome');  
     }
 }
