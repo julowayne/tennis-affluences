@@ -1,9 +1,15 @@
 @extends('layouts.default', ['title' => 'Reservation'])
 
 @section('content')
-<div class="container mt-10 p-4 mx-auto w-2/4 p-6 text-center shadow rounded bg-white">
+<div class="container mt-10 p-4 mx-auto w-2/4 p-6 text-center shadow-md rounded bg-white">
   <div class="text-3xl mb-6 font-bold">
     Je réserve mon terrain pour une heure.
+  </div>
+  <div class="p-2 font-medium">
+    Il n'y a que 2 places/heure disponibles !
+  </div>
+  <div class="p-2 mb-2 font-medium">
+    Reservations sur heure complète (exemple: 17h00). 
   </div>
 @if(Session::has('message'))
 <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-yellow-500">
@@ -25,24 +31,8 @@
   </span>
 </div>
 @endif
-  <div class="mt-10 sm:mt-0">
-    <div class="md:grid md:grid-cols-3 md:gap-4">
-      <div>
-        <div class="flex justify-center">
-          <img class="h-8 w-auto sm:h-10" src="/assets/img/alert.png">
-        </div>
-        <div>
-          <ul class="p-3">
-          <li class="text-left text-2xl mb-2">
-            Attention il n'y a que 2 places/heure disponibles !
-          </li>
-          <li class="text-left text-2xl">
-           Les reservations se font sur heure complète. <br> (exemple: 17h00)
-          </li>
-          </ul>
-        </div>
-      </div>
-      <div class="mt-5 md:mt-0 md:col-span-2 shadow-sm">
+  <div class="mt-10 px-10 sm:mt-0">
+      <div class="mt-5 md:mt-0 md:col-span-2 shadow">
         <form action="{{route('reservation')}}" method="POST">
           @csrf
           <div class="shadow overflow-hidden sm:rounded-md">
@@ -71,7 +61,6 @@
           </div>
         </form>
       </div>
-    </div>
   </div>
 </div>
 

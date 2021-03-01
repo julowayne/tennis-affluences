@@ -39,10 +39,10 @@
   </div>
   @endif
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+    <h2 class="text-3xl font-extrabold p-2 tracking-tight text-gray-900 sm:text-4xl">
       <span class="block">Envie de reserver un terrain ?</span>
       <span class="block text-yellow-500">Choississez votre créneau selon les disponibilités.</span>
-      <span class="block">Ouvert tout les jours de 9h à 18h</span>
+      <span class="block">Ouvert tout les jours sauf le lundi de 9h à 18h.</span>
     </h2>
     <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
       <div class="inline-flex rounded-md shadow">
