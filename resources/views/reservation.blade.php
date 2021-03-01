@@ -1,13 +1,10 @@
 @extends('layouts.default', ['title' => 'Reservation'])
 
 @section('content')
-<div class="container mt-10 p-4 mx-auto w-1/2 p-6 text-center shadow rounded bg-white">
-  <div class="text-3xl mb-5 font-bold">
-    Je réserve mon terrain pour une heure
+<div class="container mt-10 p-4 mx-auto w-2/4 p-6 text-center shadow rounded bg-white">
+  <div class="text-3xl mb-6 font-bold">
+    Je réserve mon terrain pour une heure.
   </div>
-  <!-- @if(Session::has('message'))
-<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
-@endif -->
 @if(Session::has('message'))
 <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-yellow-500">
   <span class="inline-block align-middle">
@@ -29,15 +26,18 @@
 </div>
 @endif
   <div class="mt-10 sm:mt-0">
-    <div class="md:grid md:grid-cols-3 md:gap-6">
-      <div class="md:col-span-1">
+    <div class="md:grid md:grid-cols-3 md:gap-4">
+      <div>
+        <div class="flex justify-center">
+          <img class="h-8 w-auto sm:h-10" src="/assets/img/alert.png">
+        </div>
         <div>
-          <ul class="list-disc p-3">
-          <li class="text-left mb-2">
-          Attention il n'y a que 2 places/heure disponibles !
+          <ul class="p-3">
+          <li class="text-left text-2xl mb-2">
+            Attention il n'y a que 2 places/heure disponibles !
           </li>
-          <li class="text-left">
-          Les reservations se font sur heure complète (ex: 17h00).
+          <li class="text-left text-2xl">
+           Les reservations se font sur heure complète. <br> (exemple: 17h00)
           </li>
           </ul>
         </div>
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="py-3 text-right sm:px-6">
-              <button type="submit" class="inline-flex justify-center py-2 px-8 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <button type="submit" class="inline-flex justify-center py-2 px-8 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
                 Réserver
               </button>
             </div>
@@ -74,4 +74,5 @@
     </div>
   </div>
 </div>
+
 @endsection('content')

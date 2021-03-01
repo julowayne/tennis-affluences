@@ -12,11 +12,12 @@
 @include('partials.navbar')
 @yield('content')
 
-  
+<script src="https://chatbox.csml.dev/script.min.js?token=gpurlww7dnmnrd6fado1es9olns5rkfs" id="clevy-chatbox" async></script>  
 </body>
 </html>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 body {
   background-color: #F9FAFB;
 }

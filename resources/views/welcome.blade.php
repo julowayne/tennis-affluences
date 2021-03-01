@@ -55,9 +55,6 @@
 </div>
 <div class="container flex">
   <div class=" w-1/2 p-6 rounded">
-    <div class="text-center text-3xl mb-2 font-medium">
-      Localisation
-    </div>
     <div id="map" class="shadow rounded"></div>
     <script
       src="https://maps.googleapis.com/maps/api/js?key={{$_ENV['GOOGLE_APP_KEY']}}&callback=initMap&libraries=&v=weekly"
@@ -65,9 +62,6 @@
     ></script>
   </div>
   <div class=" w-1/2 p-6 rounded">
-    <div class="text-center text-3xl font-medium">
-      Le club
-    </div>
     <div>
       <img src="/assets/img/tennis-municipaux-3.jpg" alt="tennis club">
     </div>
