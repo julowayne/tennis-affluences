@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\formValidation;
+use App\Http\Requests\apiReservation;
 use App\Rules\cancelApiReservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
@@ -16,7 +16,7 @@ class ApiController extends Controller
         // $data = DB::table('reservations')->get();
         // return response($data, 200);
     }
-    public function addReservation(formValidation $request)
+    public function addReservation(apiReservation $request)
     {
         $params = [
             'date' => $request->get('date'),
