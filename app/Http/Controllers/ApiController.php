@@ -28,7 +28,10 @@ class ApiController extends Controller
             'email' => $params['email'],
             'token' => $params['token']
         ]);
-        return response('la réservation a bien été prise en compte', 201);
+        return response()->json([
+            'message' => 'la réservation a bien été prise en compte',
+            'token' => $params['token'],
+        ], 201);
     }
     public function deleteReservation(Request $request, $token)
     {
@@ -39,6 +42,6 @@ class ApiController extends Controller
         // $data = DB::table('reservations')->select()->where('token', '=', $token)->get();
 
         DB::table('reservations')->where('token', '=', $token)->delete();
-        return response('', 204);
+        return response()->json('', 204);
     }
 }
