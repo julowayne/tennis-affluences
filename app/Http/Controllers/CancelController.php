@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-
 use Illuminate\Support\Facades\DB;
 
 class cancelController extends Controller
@@ -19,8 +18,7 @@ class cancelController extends Controller
             'token' => $token
         ]);
         $data = DB::table('reservations')->select()->where('token', '=', $token)->get();
-        // var_dump($data[0]->email);
-        // die();
+
         $params = [
             'date' => $data[0]->date,
             'email' => $data[0]->email,
