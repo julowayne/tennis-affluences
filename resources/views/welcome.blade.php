@@ -53,7 +53,7 @@
     </div>
   </div>
 </div>
-<div class="container flex">
+<div class="flex">
   <div class=" w-1/2 p-6 rounded">
     <div id="map" class="shadow rounded"></div>
     <script
@@ -61,12 +61,17 @@
       async
     ></script>
   </div>
-  <div class=" w-1/2 p-6 rounded">
-    <div>
-      <img src="/assets/img/tennis-municipaux-3.jpg" alt="tennis club">
+  <div class="w-1/2 p-6 rounded flex justify-center">
+    <div id="club">
+      <img src="/assets/img/tennis-municipaux.jpg" alt="tennis club">
     </div>
 </div>
 </div>
+<style>
+#club {
+  height: 400px;
+}
+</style>
 
 
 @endsection('content')
