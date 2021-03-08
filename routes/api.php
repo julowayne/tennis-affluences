@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('infos', [\App\Http\Controllers\ApiController::class, 'get']);
 
-Route::post('booking', [\App\Http\Controllers\ApiController::class, 'addReservation']);
+Route::post('reservation', [\App\Http\Controllers\ApiController::class, 'addReservation']);
 
-Route::post('booking/{token}', [\App\Http\Controllers\ApiController::class, 'deleteReservation'] );
+Route::post('reservation/annulation/{token}', [\App\Http\Controllers\ApiController::class, 'deleteReservation'] );
 
