@@ -42,6 +42,6 @@ class ApiController extends Controller
         // $data = DB::table('reservations')->select()->where('token', '=', $token)->get();
 
         DB::table('reservations')->where('token', '=', $token)->delete();
-        return response()->json('', 204);
+        return response()->json(['message' => 'la réservation a bien été prise en compte'], 204);
     }
 }
